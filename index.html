@@ -3,13 +3,21 @@ layout: default
 title: Home
 ---
 
-<h1>My Math Notes</h1>
+<h1>Changsheng (Charles) Chen</h1>
+<p>Math / CS / Stats. Notes on learning theory, optimization, and random math.</p>
 
+<nav>
+  <a href="/notes/">Notes</a> |
+  <a href="/research/">Research</a> |
+  <a href="/assets/cv.pdf">CV</a> |
+  <a href="/contact/">Contact</a>
+</nav>
+
+<hr>
+
+<h2>Latest posts</h2>
 <ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <small>{{ post.date | date: "%Y-%m-%d" }}</small>
-    </li>
+  {% for post in site.posts limit:5 %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
